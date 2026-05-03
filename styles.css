@@ -122,12 +122,18 @@ nav a:hover {
 
 /* Info Section (Packed with info) */
 .info-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 5%;
+  width: 100%;
+  padding: 6rem 5%;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 2px, transparent 2px);
+  background-size: 30px 30px;
 }
 
-.info-section h2 {
+.info-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-container h2 {
   font-size: 2rem;
   color: var(--heading-color);
   text-align: center;
@@ -147,11 +153,12 @@ nav a:hover {
   border-radius: 12px;
   padding: 2rem;
   box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .card:hover {
   box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .card-icon {
@@ -180,10 +187,27 @@ nav a:hover {
 }
 
 /* Content Pages (Privacy, Terms) */
+.page-wrapper {
+  width: 100%;
+  padding: 4rem 5%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.03) 0,
+    rgba(0, 0, 0, 0.03) 1px,
+    transparent 1px,
+    transparent 20px
+  );
+  min-height: calc(100vh - 200px);
+}
+
 .page-content {
   max-width: 800px;
-  margin: 4rem auto;
-  padding: 0 5%;
+  margin: 0 auto;
+  background: var(--card-bg);
+  padding: 4rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--card-border);
 }
 
 .page-content h1 {
